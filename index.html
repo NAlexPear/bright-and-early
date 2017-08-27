@@ -1,0 +1,289 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>reveal.js</title>
+<link rel="stylesheet" href="node_modules/reveal.js/css/reveal.css">
+<link rel="stylesheet" href="node_modules/reveal.js/css/theme/black.css">
+<link rel="stylesheet" href="theme/css/override.css">
+
+<link rel="stylesheet" href="node_modules/reveal.js/lib/css/zenburn.css">
+<script src="https://use.fontawesome.com/05909e7533.js"></script>
+
+<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'node_modules/reveal.js/css/print/pdf.css' : 'node_modules/reveal.js/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section>
+Hi.
+</section>
+<section>
+<header>
+<h2>
+Goals for this morning
+</h2>
+</header>
+<ol>
+<li class="fragment">inspire!</li>
+<li class="fragment">describe</li>
+<li class="fragment">prescribe</li>
+</ol>
+</section>
+<section>
+<i class="fa fa-exclamation fa-5x"></i>
+<h2>important disclaimers</h2>
+</section>
+<section>
+<section>
+<h2>How did we get here?</h2>
+</section>
+<section>
+<header>
+<h2>ART!</h2>
+</header>
+<div class="left">
+<ul>
+<li class="fragment">
+Irreverent
+</li>
+<li class="fragment">
+Self-indulgent
+</li>
+<li class="fragment">
+Outlandish
+</li>
+<li class="fragment">
+Accessible
+</li>
+</ul>
+<p class="fragment">
+<b>Primary Metric</b>: Response
+</p>
+</div>
+</section>
+<section>
+<img src="theme/images/olefit.jpg" alt="OLEFIT games"/>
+</section>
+<section>
+<header>
+<h2>Graphs!</h2>
+</header>
+<div class="left">
+<ul>
+<li class="fragment">
+Functional
+</li>
+<li class="fragment">
+Anonymous
+</li>
+<li class="fragment">
+Clinical
+</li>
+<li class="fragment">
+Inaccessible
+</li>
+</ul>
+<p class="fragment">
+<b>Primary Metric</b>: Completeness
+</p>
+</div>
+</section>
+<section>
+<header>
+<h2>Coaching!</h2>
+</header>
+<div class="left">
+<ul>
+<li class="fragment">
+Expedient
+</li>
+<li class="fragment">
+Empathetic
+</li>
+<li class="fragment">
+Conciliatory
+</li>
+<li class="fragment">
+Conversational
+</li>
+</ul>
+<p class="fragment">
+<b>Primary Metric</b>: Efficiency
+</p>
+</div>
+</section>
+</section>
+<section>
+<section>
+<header>
+<h2>Web Development</h2>
+</header>
+<img src="theme/images/FEWD-flow2.png" alt="FEWD" style="height:60%;width:auto;"/>
+</section>
+<section>
+<h2>Design for Computers</h2>
+</section>
+<section data-markdown>
+<script type="text/template">
+							#### Bad:
+							```javascript
+							$( window ).on( "resize", function doThing(){
+								// doing a thing here!
+							} );
+							```
+
+							#### Not-So-Bad:
+							```javascript
+							function doThing(){
+								// doing a thing here!
+							};
+
+							var debouncedThing = _.debounce( doThing, 250 );
+
+
+							$( window ).on( "resize", debouncedThing );
+							```
+						</script>
+</section>
+<section>
+<h2>Design for Coders</h2>
+</section>
+<section data-markdown>
+<script type="text/template">
+							#### Bad and Ugly:
+							```javascript
+							var a = ["Message 1","Message 2","","Message 3",""];
+
+							for(let i=0;i<a.length;i++){
+								a[i]?console.log(a[i]):console.log("no message!")
+							}
+							```
+
+							#### Bad:
+							```javascript
+							var messages = [
+								"Message 1",
+								"Message 2",
+								"",
+								"Message 3",
+								""
+							];
+
+							for( let i = 0; i < messages.length; i++ ){
+								messages[i] ?
+								console.log( messages[i] ) :
+								console.log( "no message!" )
+							}
+							```
+						</script>
+</section>
+<section data-markdown>
+<script type="text/template">
+							#### Good:
+							```javascript
+							var messages = [
+								"Message 1",
+								"Message 2",
+								"",
+								"Message 3",
+								""
+							];
+
+							function logMessage( message ){
+								if( message ){
+									console.log( message );
+								}
+								else {
+									console.log( "no message!" );
+								}
+							}
+
+							messages.forEach( logMessage )
+							```
+						</script>
+</section>
+<section>
+<h2>Design for Consumers</h2>
+</section>
+<section>
+<img src="theme/images/choose-phone-number.png" alt="lol, phone numbers">
+</section>
+<section>
+<img src="theme/images/phone1.gif">
+<img src="theme/images/phone2.gif">
+</section>
+<section>
+<img src="theme/images/phone3.gif">
+<img src="theme/images/phone4.gif">
+</section>
+</section>
+<section>
+<header>
+<h2>
+Final Checklist
+</h2>
+</header>
+<ol>
+<li class="fragment">
+Am I being empathetic towards my end user?
+</li>
+<li class="fragment">
+Am I balancing artistic and technical impulses?
+</li>
+<li class="fragment">
+Am I maximizing bandwidth?
+</li>
+</ol>
+</section>
+<section>
+thanks.
+</section>
+<section>
+<header>
+<h2>
+Contact
+</h2>
+</header>
+<ul>
+<li class="fragment">@NAlexPear</li>
+<li class="fragment">alexpear.com</li>
+<li class="fragment"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7819141d00380b190e0e011b171c1d0a0b561b1715">[email&#160;protected]</a></li>
+<li class="fragment">@SavvyCoders</li>
+<li class="fragment">savvycoders.com</li>
+</ul>
+</section>
+</div>
+<footer>
+<div class="left signature">
+<span class="title">BRIGHT AND EARLY</span>
+|
+<span class="name">alex pearson</span>
+</div>
+</footer>
+</div>
+<script>!function(e,t,r,a,n,c,l,o){function h(e,t,r,a){for(r='',a='0x'+e.substr(t,2)|0,t+=2;t<e.length;t+=2)r+=String.fromCharCode('0x'+e.substr(t,2)^a); return r}try{for(n=e.getElementsByTagName('a'),l='/cdn-cgi/l/email-protection#',o=l.length,a=0;a<n.length;a++)try{c=n[a],t=c.href.indexOf(l),t>-1&&(c.href='mailto:'+h(c.href,t+o))}catch(f){}for(n=Array.prototype.slice.apply(e.getElementsByClassName('__cf_email__')),a=0;a<n.length;a++)try{c=n[a],c.parentNode.replaceChild(e.createTextNode(h(c.getAttribute('data-cfemail'),0)),c)}catch(f){}}catch(f){}}(document)</script><script src="node_modules/reveal.js/lib/js/head.min.js"></script>
+<script src="node_modules/reveal.js/js/reveal.js"></script>
+<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'node_modules/reveal.js/plugin/markdown/marked.js' },
+					{ src: 'node_modules/reveal.js/plugin/markdown/markdown.js' },
+					{ src: 'node_modules/reveal.js/plugin/notes/notes.js', async: true },
+					{ src: 'node_modules/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+</body>
+</html>

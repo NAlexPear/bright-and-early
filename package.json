@@ -1,0 +1,14 @@
+{
+  "name": "bright-and-early",
+  "version": "1.0.0",
+  "description": "A presentation for Bright and Early, a design-focus speed talk",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alex Pearson",
+  "license": "MIT",
+  "dependencies": {
+    "reveal.js": "^3.5.0"
+  }
+}
